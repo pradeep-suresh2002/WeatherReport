@@ -417,7 +417,7 @@
         background-color: rgb(128, 128, 128, 0.5);
         margin: 0;
         display: inline-grid;
-        grid-template-columns: 25vw 6vw;
+        grid-template-columns: 25vw 7vw;
         grid-template-rows: 4vw 4vw;
         padding-left: 1.2vw;
         padding-top: 1vw;

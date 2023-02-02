@@ -76,11 +76,12 @@ var topSection = async function () {
 
     var d = new Date();
     topMainObj.weatherIconForecast();
+    let currentTemperature =await topMainObj.forecastTemperature();
     //Display temperature,humidity, precipiation values.
     let temperatureData = await topMainObj.temperatureCelcius(displayName);
     console.log(temperatureData)
     document.getElementsByClassName("top-temp--value")[0].innerHTML =
-      temperatureData[0];
+      `${currentTemperature[0]} C`;
     document.getElementsByClassName("top-temp--value")[1].innerHTML =
       temperatureData[1];
     document.getElementsByClassName("top-humidity--value")[0].innerHTML =
@@ -91,7 +92,7 @@ var topSection = async function () {
     //Display six hour weather forecast.
     var forecastDisp = setInterval(topMainObj.currentTime.bind(topMainObj), 100);
     //Display time
-    var hoursDisp = setInterval( topMainObj.timeDisplay.bind(topMainObj), 100); // document.getElementsByClassName("top-temp--value")[0].innerHTML = "NOW";
+    var hoursDisp = setInterval( topMainObj.timeDisplay.bind(topMainObj), 100); 
 
     //Clear interval to stop refresh on change of option
     refresh.addEventListener("change", function () {

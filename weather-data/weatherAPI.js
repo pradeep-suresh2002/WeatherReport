@@ -84,6 +84,7 @@ export async function getPostValue(cityName){
         // cityForeCastTemperature = JSON.parse(cityForeCastTemperature);
         // console.log(typeof(cityForeCastTemperature))
         cityForeCastTemperature = cityForeCastTemperature.temperature;
+        console.log(cityForeCastTemperature);
         return cityForeCastTemperature;
     }
     catch(error){

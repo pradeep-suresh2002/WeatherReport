@@ -93,12 +93,15 @@ export class SixHourWeatherForeCast extends DateTime {
     let cityDataArray = await obj1.fetchCityArray();
     for (let i=0;i<cityDataArray.length;i++){
       if (cityDataArray[i].cityName == this.cityApi){
+
         this.cityCurrentTemperature = cityDataArray[i].temperature;
       }
     };
     
     let cityName = this.city;
+    
     let currentTemp = this.cityCurrentTemperature;
+    console.log(currentTemp);
     let tempArray = [];
     tempArray = await getPostValue(this.cityApi);
     return [currentTemp, tempArray];

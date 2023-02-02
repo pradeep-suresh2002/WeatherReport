@@ -17,8 +17,9 @@ export let browserOnLoadValues = (async function (cityName) {
   );
   browserTimeObj.weatherIconForecast();
   let tempDataDefault =await browserTimeObj.temperatureCelcius(cityName);
+  let temp = await browserTimeObj.forecastTemperature();
   document.getElementsByClassName("top-temp--value")[0].innerHTML =
-    tempDataDefault[0];
+    `${temp[0]} C`;
   document.getElementsByClassName("top-temp--value")[1].innerHTML =
     tempDataDefault[1];
   document.getElementsByClassName("top-humidity--value")[0].innerHTML =

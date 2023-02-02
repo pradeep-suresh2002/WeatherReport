@@ -32,7 +32,7 @@ export class TopSectionTemperature extends SixHourWeatherForeCast {
     // console.log(cityName);
     let tempObj = new DateTime(this.city);
     let cityDataArray = await tempObj.fetchCityArray();
-    
+    console.log(cityDataArray);
     for (let i=0;i<cityDataArray.length;i++){
       if (cityDataArray[i].cityName == this.cityApi){
         this.cityTempArray.push([
@@ -46,6 +46,7 @@ export class TopSectionTemperature extends SixHourWeatherForeCast {
     let TempObj = new SixHourWeatherForeCast(cityName);
     // let tempCel = TempObj.cityCurrentTemperature;
     let tempCel = this.cityTempArray[0][0];
+    console.log(tempCel);
     
     tempCel = tempCel.replace("°", " ");
     let tempFaren = parseInt(tempCel, 10);
@@ -73,6 +74,6 @@ export class TopSectionTemperature extends SixHourWeatherForeCast {
 }
 
 
-let a = new TopSectionTemperature("nome");
+
 
 
