@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="x/icon" href="/Assets/hmtlCss/weatherIcons/precipitationIconBlack.svg">
+    <link rel="stylesheet" href="./stylesheet/top_section.css">
+    <link rel="stylesheet"  href="./stylesheet/middle_section.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheet/bottom_section.css">
+    <title>Weather report</title>
+
+</head>
+
+<body>
+    <!--parent-container-->
+    <div class="entire-body">
+        <!--Top section-->
+        <section class="top-part">
+            <!--Left portion flex container-->
+            <div class="city-date">
+                <!--City icon-->
+                <img src="./assets/hmtlCss/cityIcons/newyork.svg" alt="City icon" class="city-icon--top">
+                <!--Datalist to display diffrent city names-->
+                <form data-tooltip="Select the city name" id="form">
+                    <input list="city-names" name="cityname" id="city-name" value="NewYork" class="city-selector"
+                        autocomplete="off" onfocus="this.value=''" onchange="this.blur();">
+                    <datalist id="city-names">
+
+                    </datalist>
+                </form>
+                <br>
+                <p id="error-message"></p>
+                <!--Display date-->
+                <div class="time-date">
+                    <!--Display time-->
+                    <div>
+                        <p class="time">NIL</p>
+                        <p id="time--second"></p>
+                    </div>
+
+                    <div class="time--s">
+                        <img src="./assets/hmtlCss/genralImages/amState.svg" alt="AM state" class="am-state">
+                    </div>
+                    <br>
+                    <div class="date-month">
+                        <p>01-Mar-2020</p>
+                    </div>
+
+
+                </div>
+            </div>
+            <!--Middle section flex container-->
+            <div class="temp-humid--levels">
+                <div>
+                    <!--Display temperature in Celcius-->
+                    <div class="temp">
+                        <p class="top-temp">Temp<span>&#176</span>C</p>
+                        <p class="top-temp--value">25 C</p>
+                    </div>
+
+                    <div class="temp-humid--line">
+                        <!--Line between Celcius and Humidity-->
+                    </div>
+                    <!--Display humidity-->
+                    <div class="humidity">
+                        <p class="top-humidity">Humidity</p>
+                        <p class="top-humidity--value">26<span>%</span></p>
+                    </div>
+
+                </div>
+                <div>
+                    <!--Display temperature in Farenhiet-->
+                    <div class="temp">
+                        <p class="top-temp">Temp F</p>
+                        <p class="top-temp--value" id="temp-faren">78 F</p>
+                    </div>
+                    <div class="faren-humid--line">
+                        <!--Line between Farenhiet and Precipitation-->
+                    </div>
+                    <!--Display recipitation value-->
+                    <div class="humidity">
+                        <p class="top-humidity">Precipitation</p>
+                        <p class="top-humidity--value">0<span>%</span></p>
+                    </div>
+
+                </div>
+            </div>
+            <!--Display six hours weather forecast-->
+            <div class="six-hour-weather-forecast">
+                <!--Current time with weather icon and precipitation-->
+                <div>
+                    <p class="time-now time-item">NOW</p>
+                    <p class="time-now--line">|</p>
+                    <img src="./assets/hmtlCss/weatherIcons/cloudyIcon.svg" title="Weather Image"
+                        class="time-now--weather weather-icons">
+                    <p class="time-now--precipitation precipitation-item">6</p>
+                </div>
+                <div>
+                    <p class="time-now--line2">|</p>
+                </div>
+                <!--Second hour weather forecast-->
+                <div>
+                    <p class="time-secondHour time-item">11AM</p>
+                    <p class="time-secondHour--line">|</p>
+                    <img src="./assets/hmtlCss/weatherIcons/rainyIcon.svg" class="time-secondHour--weather weather-icons">
+                    <p class="time-secondHour--precipitation precipitation-item">7</p>
+                </div>
+                <div>
+                    <p class="time-secondHour--line2">|</p>
+                </div>
+                <!--Third hour weather forecast-->
+                <div>
+                    <p class="time-thirdHour time-item">12PM</p>
+                    <p class="time-thirdHour--line">|</p>
+                    <img src="./assets/hmtlCss/weatherIcons/windyIcon.svg" class="time-thirdHour--weather weather-icons">
+                    <p class="time-thirdHour--precipitation precipitation-item">7</p>
+                </div>
+                <div>
+                    <p class="time-thirdHour--line2">|</p>
+                </div>
+                <!--Four hour weather forecast-->
+                <div>
+                    <p class="time-fourthHour time-item">1 PM</p>
+                    <p class="time-fourthHour--line">|</p>
+                    <img src="./assets/hmtlCss/weatherIcons/rainyIcon.svg" class="time-fourthHour--weather weather-icons">
+                    <p class="time-fourthHour-precipitation precipitation-item">8</p>
+                </div>
+                <div>
+                    <p class="time-fourthHour--line2">|</p>
+                </div>
+                <!--Fifth hour weather forecast-->
+                <div>
+                    <p class="time-fifthHour time-item">2PM</p>
+                    <p class="time-fifthHour--line">|</p>
+                    <img src="./assets/hmtlCss/weatherIcons/windyIcon.svg" class="time-fifthHour--weather weather-icons">
+                    <p class="time-fifthHour--precipitation precipitation-item">6</p>
+                </div>
+                <div>
+                    <p class="time-fifthHour--line2">|</p>
+                </div>
+                <!--Sixth hour weather forecast-->
+                <div>
+                    <p class="time-sixthHour time-item">3PM</p>
+                    <p class="time-sixthHour--line">|</p>
+                    <img src="./assets/hmtlCss/weatherIcons/rainyIcon.svg" class="time-sixthHour--weather weather-icons">
+                    <p class="time-sixthHour--precipitation precipitation-item">6</p>
+                </div>
+            </div>
+        </section>
+        <!--For space between top and middle section-->
+        <div class="top-margin">
+
+        </div>
+
+        <!--Middle section parent container-->
+        <div class="middle-section">
+            <!--Display heading for middle section-->
+            <div class="middle-section--head">
+                <!--Title-->
+                <div class="middle-title">
+                    <p>Top cities around the world</p>
+
+                </div>
+                <!--Middle section weather icons list-->
+                <div class="middle-icon1">
+
+
+                    <img src="./Assets/hmtlCss/weatherIcons/sunnyIcon.svg" alt="Sunny icon" id="middle-icon1--size">
+                </div>
+                <div class="middle-icon2">
+
+
+                    <img src="./Assets/hmtlCss/weatherIcons/snowflakeIcon.svg" alt="Snow flake icon"
+                        id="middle-icon2--size">
+                </div>
+                <div class="middle-icon3">
+
+
+                    <img src="./Assets/hmtlCss/weatherIcons/rainyIcon.svg" alt="Rainy icon" id="middle-icon3--size">
+                </div>
+                <div id="empty"></div>
+                <div>
+                    <p class="display-top">Display top</p>
+                </div>
+                <div>
+                    <input type="number" min="3" max="10" class="number-of-city" value="3">
+                </div>
+                <!-- <div  class="selected-city">
+                    <p>_____</p>
+                </div> -->
+            </div>
+
+
+            <!--Middle section body container-->
+            <!--Weather condition of top different cities around world-->
+            <div class="middle-section--body">
+                <!--Left scroll page icon-->
+                <div class="arrow-left">
+                    <div>
+                        <img src="./Assets/hmtlCss/arrows/arrow_left.png" alt="Arrow left" id="left-scroll">
+                    </div>
+                </div>
+                <div id="flex-box">
+                </div>
+                <!--Display right scroll down image-->
+                <div class="arrow-right">
+                    <div>
+                        <img src="./Assets/hmtlCss/arrows/arrow_right.png" alt="Arrow right" id="right-scroll">
+                    </div>
+                </div>
+            </div>
+            <div class="middlesection-margin">
+
+            </div>
+        </div>
+
+        <!--Bottom section parent container-->
+        <div class="bottom-section">
+            <!--Bottom section head portion-->
+            <div class="bottom-section--head">
+                <!--Bottom section heading-->
+                <div class="bottom-title">
+                    <p>Cities across continents at a glance</p>
+                </div>
+                <div class="bottom-order1">
+                    <p>Continent name</p>
+                </div>
+                <div class="arrow-down">
+                    <img src="./Assets/hmtlCss/genralImages/arrowUp.svg" alt="Arrow down" id ="continent-arrow">
+                </div>
+                <div class="bottom-order2">
+                    <p>Temperature</p>
+                </div>
+                <div class="arrow-up">
+                    <img src="./Assets/hmtlCss/genralImages/arrowUp.svg" alt="Arrow up" id ="temperature-arrow">
+                </div>
+            </div>
+            <!--Bottom section body-->
+            <div class="bottom-section--body" id ="bottomBody">
+                <!--Continent container-->
+                <!--Continent 2 weather details of selected city -->
+               
+
+            </div>
+            <!--Display bottom space or scroll down-->
+            <div class="bottom-margin">
+
+            </div>
+        </div>
+    </div>
+    <!--Import script file for functionalities-->
+    <script type="module" src="/weather-data/weatherAPI.js"></script>
+    <!-- <script type="module" src ="./scripts/top_section/temperature.js"></script> -->
+    <script type="module" src="./scripts/top_section/main.js"></script>
+    <script type="module" src="./scripts/middle_section/middleMain.js"></script>
+    <script type="module" src ="./scripts/bottom_section/bottomMain.js"></script>
+
+    
+
+
+
+
+</body>
+
+</html>

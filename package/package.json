@@ -1,0 +1,16 @@
+{
+  "name": "weather-data-api",
+  "version": "1.0.0",
+  "description": "A simple package to provide random weather data of top cities around the world",
+  "main": "timeZone.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "city",
+    "weather",
+    "data"
+  ],
+  "author": "Pradeep S",
+  "license": "ISC"
+}

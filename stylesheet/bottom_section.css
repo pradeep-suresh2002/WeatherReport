@@ -1,0 +1,535 @@
+/*Bottom section container properties*/
+.bottom-section {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: inline-block;
+    /* margin-left: 0.1vw; */
+    z-index: 1;
+
+}
+
+/*Bottom section head properties*/
+.bottom-section--head {
+    margin-top: 4vw;
+    display: inline-grid;
+    grid-template-columns: 40vw 32.3vw 5vw 5vw 5vw;
+    padding-left: 3.6vw;
+}
+
+/*Bottom title properties*/
+.bottom-title {
+    font-size: 2.5vw;
+    font-weight: 100;
+    text-align: center;
+    grid-column: 1/2;
+}
+
+/*Continent name display*/
+.bottom-order1 {
+    grid-column: 2/3;
+    font-size: 1.5vw;
+    text-align: end;
+    padding-top: 1.5vw;
+}
+
+/*Down arrow*/
+.arrow-down {
+    grid-column: 3/4;
+    padding-top: 3vw;
+    padding-left: 1vw;
+}
+
+/*Temperature*/
+.bottom-order2 {
+    grid-column: 4/5;
+    font-size: 1.5vw;
+    text-align: center;
+    padding-top: 1.5vw;
+}
+
+/*Up arrow*/
+.arrow-up {
+    grid-column: 5/6;
+    padding-top: 3vw;
+    padding-left: 4.3vw;
+}
+
+.arrow-up img,
+.arrow-down img {
+    background-color: black;
+    height: 2vw;
+    width: 2vw;
+}
+
+/*Bottom section body properties*/
+.bottom-section--body {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3,26vw);
+    grid-template-rows: repeat(4,7vw);
+    column-gap: 5vw;
+    row-gap: 3vw;
+    padding-left: 4.5vw;
+}
+
+/*Grid template for continent 1*/
+.continent-1 {
+    background-color: rgb(128, 128, 128, 0.5);
+    margin: 0;
+    display: inline-grid;
+    grid-template-columns: 19vw 6vw;
+    grid-template-rows: 3vw 2vw;
+    padding-left: 1.2vw;
+    padding-top: 1vw;
+}
+
+
+/*Continent name positioning*/
+.continent--name {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: inline-block;
+    font-size: 1.3vw;
+    color: yellow;
+}
+
+/*Continent temperature positioning*/
+.continent--temp {
+    display: inline-block;
+    grid-column: 2/3;
+    font-size: 1.8vw;
+    font-weight: bold;
+}
+
+/*Continent selected city positioning*/
+.continent--city {
+    display: inline-block;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    font-size: 1.5vw;
+}
+
+/*Continent humiity positioning*/
+.continent--humid {
+    display: inline-block;
+    grid-column: 2/3;
+    font-size: 1.4vw;
+    padding-top: 0.1vw;
+
+}
+
+/*Humid value positioning*/
+.humid-pose {
+    position: relative;
+    top: -0.2vw;
+}
+
+.continent-1 p,
+.continent-1 img {
+    display: inline;
+}
+
+/*Continent 2 grid box properties*/
+.continent-2 {
+    background-color: rgb(128, 128, 128, 0.5);
+    margin: 0;
+    display: inline-grid;
+    grid-template-columns: 19vw 6vw;
+    grid-template-rows: 3vw 2vw;
+    padding-left: 1.2vw;
+    padding-top: 1vw;
+}
+
+.continent-2 p,
+.continent-2 img {
+    display: inline;
+}
+
+/*Continent 3 grid box properties*/
+.continent-3 {
+    background-color: rgb(128, 128, 128, 0.5);
+    margin: 0;
+    display: inline-grid;
+    grid-template-columns: 19vw 6vw;
+    grid-template-rows: 3vw 2vw;
+    padding-left: 1.2vw;
+    padding-top: 1vw;
+}
+
+.continent-3 p,
+.continent-3 img {
+    display: inline;
+}
+
+/*Continent 4 grid box properties*/
+.continent-4 {
+    background-color: rgb(128, 128, 128, 0.5);
+    margin: 0;
+    display: inline-grid;
+    grid-template-columns: 19vw 6vw;
+    grid-template-rows: 3vw 2vw;
+    padding-left: 1.2vw;
+    padding-top: 1vw;
+}
+
+.continent-4 p,
+.continent-4 img {
+    display: inline;
+}
+
+/*Continent 5 grid box properties*/
+.continent-5 {
+    background-color: rgb(128, 128, 128, 0.5);
+    margin: 0;
+    display: inline-grid;
+    grid-template-columns: 19vw 6vw;
+    grid-template-rows: 3vw 2vw;
+    padding-left: 1.2vw;
+    padding-top: 1vw;
+}
+
+.continent-5 p,
+.continent-5 img {
+    display: inline;
+}
+
+/*Continent 6 grid box properties*/
+.continent-6 {
+    background-color: rgb(128, 128, 128, 0.5);
+    margin: 0;
+    display: inline-grid;
+    grid-template-columns: 19vw 6vw;
+    grid-template-rows: 3vw 2vw;
+    padding-left: 1.2vw;
+    padding-top: 1vw;
+}
+
+.continent-6 p,
+.continent-6 img {
+    display: inline;
+}
+
+/*Continent 7 grid box properties*/
+.continent-7 {
+    background-color: rgb(128, 128, 128, 0.5);
+    margin: 0;
+    display: inline-grid;
+    grid-template-columns: 19vw 6vw;
+    grid-template-rows: 3vw 2vw;
+    padding-left: 1.2vw;
+    padding-top: 1vw;
+}
+
+.continent-7 p,
+.continent-7 img {
+    display: inline;
+}
+
+/*Continent 8 grid box properties*/
+.continent-8 {
+    background-color: rgb(128, 128, 128, 0.5);
+    margin: 0;
+    display: inline-grid;
+    grid-template-columns: 19vw 6vw;
+    grid-template-rows: 3vw 2vw;
+    padding-left: 1.2vw;
+    padding-top: 1vw;
+}
+
+.continent-8 p,
+.continent-8 img {
+    display: inline;
+}
+
+/*Continent 9 grid box properties*/
+.continent-9 {
+    background-color: rgb(128, 128, 128, 0.5);
+    margin: 0;
+    display: inline-grid;
+    grid-template-columns: 19vw 6vw;
+    grid-template-rows: 3vw 2vw;
+    padding-left: 1.2vw;
+    padding-top: 1vw;
+}
+
+.continent-9 p,
+.continent-9 img {
+    display: inline;
+}
+
+/*Continent 10 grid box properties*/
+.continent-10 {
+    background-color: rgb(128, 128, 128, 0.5);
+    margin: 0;
+    display: inline-grid;
+    grid-template-columns: 19vw 6vw;
+    grid-template-rows: 3vw 2vw;
+    padding-left: 1.2vw;
+    padding-top: 1vw;
+}
+
+.continent-10 p,
+.continent-10 img {
+    display: inline;
+}
+
+/*Continent 11 grid box properties*/
+.continent-11 {
+    background-color: rgb(128, 128, 128, 0.5);
+    margin: 0;
+    display: inline-grid;
+    grid-template-columns: 19vw 6vw;
+    grid-template-rows: 3vw 2vw;
+    padding-left: 1.2vw;
+    padding-top: 1vw;
+}
+
+.continent-11 p,
+.continent-11 img {
+    display: inline;
+}
+
+/*Continent 12 grid box properties*/
+.continent-12 {
+    background-color: rgb(128, 128, 128, 0.5);
+    margin: 0;
+    display: inline-grid;
+    grid-template-columns: 19vw 6vw;
+    grid-template-rows: 3vw 2vw;
+    padding-left: 1.2vw;
+    padding-top: 1vw;
+}
+
+.continent-12 p,
+.continent-12 img {
+    display: inline;
+}
+
+/*Bottom section humid icon properties*/
+.bottom-section--body img {
+    width: 1.6vw;
+}
+
+.continent-1:hover,
+.continent-2:hover,
+.continent-3:hover,
+.continent-4:hover,
+.continent-5:hover,
+.continent-6:hover {
+    transform: scale(1.1, 1.1);
+    animation-name: box;
+    background-color: rgba(128, 128, 128, 0.5);
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    box-shadow: -0.5vw -0vw yellow;
+
+}
+
+@keyframes box {
+    10% {
+        background-color: rgba(128, 128, 128, 0.3);
+    }
+}
+
+.continent-7:hover,
+.continent-8:hover,
+.continent-9:hover,
+.continent-10:hover,
+.continent-11:hover,
+.continent-12:hover {
+    transform: scale(1.1, 1.1);
+    animation-name: box2;
+    background-color: rgba(128, 128, 128, 0.5);
+    animation-duration: 2s;
+    box-shadow: -0.5vw -0vw yellow;
+}
+
+@keyframes box2 {
+    10% {
+        background-color: rgba(128, 128, 128, 0.3);
+    }
+}
+
+.bottom-margin {
+    padding:5vh;
+}
+
+@media screen and (min-width:600px) and (max-width:900px) {
+    .bottom-section--body {
+        display: inline-grid;
+        grid-template-columns: repeat(2,35vw);
+        grid-template-rows: repeat(6,9vw);
+        column-gap: 7vw;
+        row-gap: 5vw;
+        padding-left: 10vw;
+
+    }
+
+    .continent--name {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: inline;
+        font-size: 1.5vw;
+        color: yellow;
+        opacity: 0.9;
+        padding-bottom: 1vw;
+    }
+
+    /*Continent temperature positioning*/
+    .continent--temp {
+        display: inline;
+        grid-column: 2/3;
+        font-size: 2vw;
+        font-weight: bold;
+    }
+
+    /*Continent selected city positioning*/
+    .continent--city {
+        display: inline-block;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        font-size: 1.7vw;
+    }
+
+    /*Continent humiity positioning*/
+    .continent--humid {
+        display: inline;
+        grid-column: 2/3;
+        font-size: 1.7vw;
+        padding-top: 0.1vw;
+
+    }
+
+    /*Humid value positioning*/
+    .humid-pose {
+        position: relative;
+        top: -0.2vw;
+    }
+
+    .continent-1 p,
+    .continent-1 img {
+        display: inline;
+    }
+
+    .continent-1 {
+        background-color: rgb(128, 128, 128, 0.5);
+        margin: 0;
+        display: inline-grid;
+        grid-template-columns: 25vw 6vw;
+        grid-template-rows: 4vw 4vw;
+        padding-left: 1.2vw;
+        padding-top: 1vw;
+    }
+
+    /* .continent-2 {
+        background-color: rgb(128, 128, 128, 0.5);
+        margin: 0;
+        display: inline-grid;
+        grid-template-columns: 25vw 6vw;
+        grid-template-rows: 4vw 4vw;
+        padding-left: 1.2vw;
+        padding-top: 1vw;
+    }
+
+    .continent-3 {
+        background-color: rgb(128, 128, 128, 0.5);
+        margin: 0;
+        display: inline-grid;
+        grid-template-columns: 25vw 6vw;
+        grid-template-rows: 4vw 4vw;
+        padding-left: 1.2vw;
+        padding-top: 1vw;
+    }
+
+    .continent-4 {
+        background-color: rgb(128, 128, 128, 0.5);
+        margin: 0;
+        display: inline-grid;
+        grid-template-columns: 25vw 6vw;
+        grid-template-rows: 4vw 4vw;
+        padding-left: 1.2vw;
+        padding-top: 1vw;
+    }
+
+    .continent-5 {
+        background-color: rgb(128, 128, 128, 0.5);
+        margin: 0;
+        display: inline-grid;
+        grid-template-columns: 25vw 6vw;
+        grid-template-rows: 4vw 4vw;
+        padding-left: 1.2vw;
+        padding-top: 1vw;
+    }
+
+    .continent-6 {
+        background-color: rgb(128, 128, 128, 0.5);
+        margin: 0;
+        display: inline-grid;
+        grid-template-columns: 25vw 6vw;
+        grid-template-rows: 4vw 4vw;
+        padding-left: 1.2vw;
+        padding-top: 1vw;
+    }
+
+    .continent-7 {
+        background-color: rgb(128, 128, 128, 0.5);
+        margin: 0;
+        display: inline-grid;
+        grid-template-columns: 25vw 6vw;
+        grid-template-rows: 4vw 4vw;
+        padding-left: 1.2vw;
+        padding-top: 1vw;
+    }
+
+    .continent-8 {
+        background-color: rgb(128, 128, 128, 0.5);
+        margin: 0;
+        display: inline-grid;
+        grid-template-columns: 25vw 6vw;
+        grid-template-rows: 4vw 4vw;
+        padding-left: 1.2vw;
+        padding-top: 1vw;
+    }
+
+    .continent-9 {
+        background-color: rgb(128, 128, 128, 0.5);
+        margin: 0;
+        display: inline-grid;
+        grid-template-columns: 25vw 6vw;
+        grid-template-rows: 4vw 4vw;
+        padding-left: 1.2vw;
+        padding-top: 1vw;
+    }
+
+    .continent-10 {
+        background-color: rgb(128, 128, 128, 0.5);
+        margin: 0;
+        display: inline-grid;
+        grid-template-columns: 25vw 6vw;
+        grid-template-rows: 4vw 4vw;
+        padding-left: 1.2vw;
+        padding-top: 1vw;
+    }
+
+    .continent-11 {
+        background-color: rgb(128, 128, 128, 0.5);
+        margin: 0;
+        display: inline-grid;
+        grid-template-columns: 25vw 6vw;
+        grid-template-rows: 4vw 4vw;
+        padding-left: 1.2vw;
+        padding-top: 1vw;
+    }
+
+    .continent-12 {
+        background-color: rgb(128, 128, 128, 0.5);
+        margin: 0;
+        display: inline-grid;
+        grid-template-columns: 25vw 6vw;
+        grid-template-rows: 4vw 4vw;
+        padding-left: 1.2vw;
+        padding-top: 1vw;
+    } */
+}

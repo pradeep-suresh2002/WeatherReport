@@ -1,0 +1,667 @@
+/*Importing external font style*/
+@font-face {
+    font-family: Roboto;
+    src: url("../Assets/hmtlCss/font/Roboto/Roboto-Light.ttf");
+}
+
+/*Setting up the font style in root*/
+:root {
+    --font-style: Roboto;
+}
+
+/*Global declartions in body*/
+body {
+    background-image: url("../assets/hmtlCss/genralImages/background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    color: white;
+    font-family: var(--font-style);
+}
+
+/*Parent body container background color*/
+.entire-body {
+    background-color: rgba(0, 0, 0, 0.5);
+    user-select: none;
+}
+
+/*Top section flex container*/
+.top-part {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/*Top left container properties*/
+.city-date {
+    height: auto;
+    width: 30%;
+    margin-top: 1rem;
+}
+
+/*Datalist form style*/
+.city-date form {
+    display: inline;
+}
+
+/*City icon position*/
+.city-icon--top {
+    height: 7rem;
+    width: 7rem;
+    display: inline;
+    float: left;
+    margin: 0;
+}
+
+/*Setting up the tooltip*/
+[data-tooltip] {
+    position: relative;
+    cursor: default;
+}
+
+/*Tool tip properties*/
+[data-tooltip]::after {
+    position: absolute;
+    width: 12vw;
+    top: -4vw;
+    left: 2rem;
+    content: attr(data-tooltip);
+    text-align: center;
+    box-sizing: border-box;
+    color: white;
+    background-color: black;
+    padding: 8px;
+    border-radius: 0.2vw;
+    font-size: 0.9em;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s, transform 0.2s;
+}
+
+/*Tool tip hover animation*/
+[data-tooltip]:hover::after {
+    opacity: 0.5;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/*Datalist properties for selecting the city*/
+.city-selector {
+    display: inline;
+    height: 3rem;
+    width: 14rem;
+    font-size: 2rem;
+    background-color: rgba(128, 128, 128, 0.4);
+    color: white;
+    border: none;
+    padding-left: 1.2rem;
+    margin-top: 3.8rem;
+    margin-left: 1.5rem;
+    font-weight: 100;
+    text-align: center;
+}
+#error-message{
+    position: absolute;
+    left:9.5vw;
+    color:tomato;
+}
+
+/*Time and Date*/
+.time-date {
+    display: inline-grid;
+    margin-top: 1.6vw;
+    margin-left:0vw;
+    grid-template-columns: 8vw 3vw 3vw ; 
+    grid-template-rows: 5.2vw 5vw; 
+
+    color: white;
+}
+
+/*Time properties*/
+.time {
+    font-size: 2rem;
+    display: inline-block;
+    grid-area: 1/1/2/2;
+    padding-top: 0vw;
+    padding-left: 0.9vw;
+    padding-top: 1.2vw;
+    
+}
+
+#time--second {
+    display: inline-block;
+    font-size: 1.5vw;
+    
+}
+
+/*AM stte image position*/
+.am-state {
+    display: inline;
+    height: 5vw;
+    width: 5vw;
+    line-height: 5px;
+    grid-area:1/2/2/3;
+    padding-left: 0rem;
+    margin: 0;
+    padding-top: 0rem;
+}
+
+/*Date display properties*/
+.date-month {
+    font-size: 1.7rem;
+    grid-area:2/1/3/3;
+    padding-top:0.2vw;
+   padding-left:1.2vw;
+}
+
+
+/*emperature and humidity properties*/
+.temp-humid--levels {
+    width: 25%;
+    height: auto;
+    margin: 1rem;
+    padding-top: 1.2rem;
+}
+
+.temp {
+    display: inline-block;
+    margin: 0;
+}
+#temp-faren{
+    
+    display: inline;
+    font-size: 1.9vw;
+}
+.top-temp {
+    font-size: 1.7rem;
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+/*Temperature humidity line*/
+.temp-humid--line {
+    border-right: 0.5px dashed white;
+    display: inline-block;
+    margin: 0;
+    height: 6rem;
+    padding-right: 1.8rem;
+    padding-top: 0.5rem;
+    margin-top: 0.6rem;
+    /* text-align: center; */
+}
+
+/*Farenhiet precipitation line*/
+.faren-humid--line {
+    border-right: 0.5px dashed white;
+    display: inline-block;
+    margin: 0;
+    height: 6rem;
+    padding-right: 2.2rem;
+    padding-top: 0.5rem;
+    margin-top: 0.6rem;
+    text-align: center;
+}
+
+.humidity {
+    display: inline-block;
+    margin: 0;
+    padding-left: 2rem;
+}
+
+.top-humidity {
+    font-size: 1.7rem;
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+span {
+    font-weight: 100;
+}
+
+.top-temp--value {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: bold;
+    padding-left: 0.4rem;
+}
+
+.top-humidity--value {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.top-farenheit {
+    margin: 0;
+    font-size: 1.7rem;
+}
+
+.top-farenheit--value {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: bold;
+    padding-left: 0.4rem;
+}
+
+/*Six hor forecast grid template*/
+.six-hour-weather-forecast {
+    margin: 0;
+    width: 40%;
+    display: inline-grid;
+    grid-template-columns: 3.2rem 3.2rem 3.2rem 3.2rem 3.2rem 3.2rem 3.2rem 3.2rem 3.2rem 3.2rem 3.2rem 3.2rem;
+    grid-template-rows: 3rem 3rem 3rem 3rem;
+    padding: 1.2rem;
+    padding-top: 2.8rem;
+
+}
+
+/*Forecast image properties*/
+.six-hour-weather-forecast img {
+    height: 3vw;
+    width: 3.5vw;
+}
+
+/*Time and line properties*/
+.time-now {
+    text-align: center;
+    font-size: 1.2rem;
+    grid-column: 1/2;
+
+}
+
+.time-now--line {
+    text-align: center;
+    font-size: 1.5rem;
+    grid-column: 1/2;
+    grid-row: 2/3;
+
+}
+
+/*Weather and precipitation properties*/
+.time-now--weather {
+    text-align: center;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    padding-top: 0.2rem;
+
+}
+
+.time-now--precipitation {
+    text-align: center;
+    font-size: 1.2rem;
+    grid-column: 1/2;
+    grid-row: 4/5;
+    margin: 0;
+    padding-top: 2rem;
+    padding-left: 0.6rem;
+
+}
+
+.time-now--line2 {
+    font-size: 1.5rem;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    text-align: center;
+    padding-top: 4.05rem;
+    margin: 0;
+
+}
+
+.time-secondHour {
+    text-align: center;
+    font-size: 1.2rem;
+    grid-column: 3/4;
+
+}
+
+.time-secondHour--line {
+    text-align: center;
+    font-size: 1.5rem;
+    grid-column: 3/4;
+    grid-row: 2/3;
+
+}
+
+.time-secondHour--weather {
+    text-align: center;
+    grid-column: 3/4;
+    grid-row: 3/4;
+    padding-top: 0.2rem;
+
+}
+
+.time-secondHour--precipitation {
+    text-align: center;
+    font-size: 1.2rem;
+    grid-column: 3/4;
+    grid-row: 4/5;
+    margin: 0;
+    padding-top: 2rem;
+    padding-left: 0.6rem;
+
+}
+
+.time-secondHour--line2 {
+    font-size: 1.5rem;
+    grid-column: 4/5;
+    grid-row: 2/3;
+    text-align: center;
+    padding-top: 4.05rem;
+    margin: 0;
+
+}
+
+.time-thirdHour {
+    text-align: center;
+    font-size: 1.2rem;
+    grid-column: 5/6;
+
+}
+
+.time-thirdHour--line {
+    text-align: center;
+    font-size: 1.5rem;
+    grid-column: 5/6;
+    grid-row: 2/3;
+
+}
+
+.time-thirdHour--weather {
+    text-align: center;
+    font-size: 1.2rem;
+    grid-column: 5/6;
+    grid-row: 3/4;
+    padding-top: 0.2rem;
+
+}
+
+.time-thirdHour--precipitation {
+    text-align: center;
+    font-size: 1.2rem;
+    grid-column: 5/6;
+    grid-row: 4/5;
+    margin: 0;
+    padding-top: 2rem;
+    padding-left: 0.6rem;
+
+}
+
+.time-thirdHour--line2 {
+    font-size: 1.5rem;
+    grid-column: 6/7;
+    grid-row: 2/3;
+    text-align: center;
+    padding-top: 4.05rem;
+    margin: 0;
+
+}
+
+.time-fourthHour {
+    text-align: center;
+    font-size: 1.2rem;
+    grid-column: 7/8;
+
+}
+
+.time-fourthHour--line {
+    text-align: center;
+    font-size: 1.5rem;
+    grid-column: 7/8;
+    grid-row: 2/3;
+
+}
+
+.time-fourthHour--weather {
+    text-align: center;
+    font-size: 1.2rem;
+    grid-column: 7/8;
+    grid-row: 3/4;
+    padding-top: 0.2rem;
+
+}
+
+.time-fourthHour-precipitation {
+    text-align: center;
+    font-size: 1.2rem;
+    grid-column: 7/8;
+    grid-row: 4/5;
+    margin: 0;
+    padding-top: 2rem;
+    padding-left: 0.6rem;
+
+}
+
+.time-fourthHour--line2 {
+    font-size: 1.5rem;
+    grid-column: 9/10;
+    grid-row: 2/3;
+    text-align: center;
+    padding-top: 4.05rem;
+    margin: 0;
+
+}
+
+.time-fifthHour {
+    text-align: center;
+    font-size: 1.2rem;
+    grid-column: 10/11;
+
+}
+
+.time-fifthHour--line {
+    text-align: center;
+    font-size: 1.5rem;
+    grid-column: 10/11;
+    grid-row: 2/3;
+
+}
+
+.time-fifthHour--weather {
+    text-align: center;
+    font-size: 1.2rem;
+    grid-column: 10/11;
+    grid-row: 3/4;
+    padding-top: 0.2rem;
+
+}
+
+.time-fifthHour--precipitation {
+    text-align: center;
+    font-size: 1.2rem;
+    grid-column: 10/11;
+    grid-row: 4/5;
+    margin: 0;
+    padding-top: 2rem;
+    padding-left: 0.6rem;
+}
+
+.time-fifthHour--line2 {
+    font-size: 1.5rem;
+    grid-column: 11/12;
+    grid-row: 2/3;
+    text-align: center;
+    padding-top: 4.05rem;
+    margin: 0;
+
+}
+
+.time-sixthHour {
+    text-align: center;
+    font-size: 1.2rem;
+    grid-column: 12/13;
+
+}
+
+.time-sixthHour--line {
+    text-align: center;
+    font-size: 1.5rem;
+    grid-column: 12/13;
+    grid-row: 2/3;
+
+}
+
+.time-sixthHour--weather {
+    text-align: center;
+    font-size: 1.2rem;
+    grid-column: 12/13;
+    grid-row: 3/4;
+    padding-top: 0.2rem;
+
+}
+
+.time-sixthHour--precipitation {
+    text-align: center;
+    font-size: 1.2rem;
+    grid-column: 12/13;
+    grid-row: 4/5;
+    margin: 0;
+    padding-top: 2rem;
+    padding-left: 0.6rem;
+
+}
+
+.top-margin {
+    padding: 0vw;
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1900px) {
+
+    /*Reducing global font set by browsers and setting up new value*/
+    html {
+        font-size: 14px;
+    }
+    .time-date {
+        display: inline-grid;
+        grid-template-columns: 9.5rem 3rem 3rem ; 
+        grid-template-rows: 5vw 5vw; 
+        margin-left: 0vw;
+        color: white;
+    }
+    .am-state {
+        margin-top: 1rem;;
+        padding-left: 0rem;
+        height: 4vw;
+        width: 4vw;
+
+
+    }
+    .date-month {
+        margin-top:0.5vw;
+    }
+
+}
+
+
+/*Media query for sizes with Min width:1000px and Max-width:1400px*/
+@media screen and (min-width: 1000px) and (max-width: 1400px) {
+
+    /*Reducing global font set by browsers and setting up new value*/
+    html {
+        font-size: 11px;
+    }
+    .time-date {
+        display: inline-grid;
+        grid-template-columns: 9rem 3rem 3rem ; 
+        grid-template-rows: 6vw 5vw; 
+        /* margin-left: 7vw; */
+        color: white;
+    }
+    .am-state {
+        margin-top: 1vw;;
+        padding-left: 0rem;
+        height: 4rem;
+        width: 4rem;
+
+    }
+    .date-month {
+        margin-top:0.5vw;
+    }
+
+}
+
+/*Media query for Min width:800 px and Max width:1000px*/
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+    html {
+        font-size: 9px;
+    }
+
+    /*Time date positioning*/
+    .time-date {
+        display: inline-grid;
+        grid-template-columns: 9rem 3rem 3rem ; 
+        grid-template-rows: 5.2vw 5vw; 
+        margin-left: 7vw;
+        color: white;
+    }
+    .am-state {
+
+        padding-left: 0.5rem;
+        margin-top: 0.5vw;
+
+    }
+    .date-month {
+        margin-top:1.1vw;
+    }
+
+    /*Tool tip hour postioning*/
+    [data-tooltip]::after {
+        margin: 0;
+        top: -5vw;
+        left: 2rem;
+
+    }
+}
+
+/*Media query for Min width:650px and Max width: 800px*/
+@media screen and (min-width: 650px) and (max-width: 800px) {
+    html {
+        font-size: 7px;
+    }
+
+    .time-date {
+        display: inline-grid;
+        grid-template-columns: 8.7rem 3rem 3rem;
+        grid-template-rows: 5.2vw 5vw;
+        margin-left: 7.2rem;
+    }
+    .am-state{
+        margin-top: 0.5vw;
+    }
+
+    [data-tooltip]::after {
+        margin: 0;
+        top: -5.2vw;
+        left: 2rem;
+    }
+    .date-month {
+        margin-top:1vw;
+    }
+}
+
+/*media query for mMin width:600px and Max width:650px*/
+@media screen and (min-width: 600px) and (max-width: 650px) {
+    html {
+        font-size: 6.5px;
+    }
+
+    .time-date {
+        display: inline-grid;
+        grid-template-columns:8.7vw 3vw 3vw;
+        grid-template-rows: 5.2vw 5vw;
+        margin-left: 7.2rem;
+    }
+    .am-state{
+        margin-top: 0.5vw;
+    }
+
+    [data-tooltip]::after {
+        margin: 0;
+        top: -5.4vw;
+        left: 2rem;
+    }
+    .date-month {
+        margin-top:1vw;
+    }
+}
