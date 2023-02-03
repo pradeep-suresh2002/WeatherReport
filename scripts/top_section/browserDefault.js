@@ -17,9 +17,13 @@ export let browserOnLoadValues = (async function (cityName) {
   );
   browserTimeObj.weatherIconForecast();
   let tempDataDefault =await browserTimeObj.temperatureCelcius(cityName);
-  let temp = await browserTimeObj.forecastTemperature();
+  let tempArray = await browserTimeObj.forecastTemperature();
+  for (let i = 0; i < tempArray.length; i++) {
+    document.getElementsByClassName("precipitation-item")[i].innerHTML =
+      tempArray[i];
+  }
   document.getElementsByClassName("top-temp--value")[0].innerHTML =
-    `${temp[0]} C`;
+    `${tempArray[0]} C`;
   document.getElementsByClassName("top-temp--value")[1].innerHTML =
     tempDataDefault[1];
   document.getElementsByClassName("top-humidity--value")[0].innerHTML =

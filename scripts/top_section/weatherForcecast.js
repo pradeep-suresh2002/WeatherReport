@@ -136,10 +136,7 @@ export class SixHourWeatherForeCast extends DateTime {
     let sixthHourTemp = sixHourTempData[1][4].split("°");
     sixthHourTemp = sixthHourTemp[0];
     forecastArray.push(sixthHourTemp);
-    for (let i = 0; i < forecastArray.length; i++) {
-      document.getElementsByClassName("precipitation-item")[i].innerHTML =
-        forecastArray[i];
-    }
+
     return forecastArray;
   }
 

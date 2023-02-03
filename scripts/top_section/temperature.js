@@ -19,6 +19,8 @@ export class TopSectionTemperature extends SixHourWeatherForeCast {
     // this.PrecipitationValue = data[city].precipitation;
     this.cityApi = userSelect.value;
     this.cityTempArray = [];
+    this.cityData = [];
+    // this.tempTop = this.temperatureCelcius(city);
     // console.log(this.PrecipitationValue);
   }
 
@@ -41,6 +43,7 @@ export class TopSectionTemperature extends SixHourWeatherForeCast {
           cityDataArray[i].precipitation
         ]);
       }
+      this.cityData = this.cityTempArray;
     };
     // console.log(cityTempArray[0]);
     let TempObj = new SixHourWeatherForeCast(cityName);
@@ -53,7 +56,6 @@ export class TopSectionTemperature extends SixHourWeatherForeCast {
     tempFaren = tempFaren * (9 / 5) + 32;
     tempFaren = parseInt(tempFaren, 10);
     return [tempCel, tempFaren + " F"];
-
   }
 
   /**Creates a function to get humidity value of city

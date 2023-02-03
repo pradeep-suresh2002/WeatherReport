@@ -67,6 +67,7 @@ var topSection = async function () {
     var cityicon = document.getElementsByClassName("city-icon--top")[0];
     cityicon.src = iconPath;
     var topMainObj = new TopSectionTemperature(displayName);
+    console.log(topMainObj.cityData);
 
     console.log(displayName);
 
@@ -76,12 +77,17 @@ var topSection = async function () {
 
     var d = new Date();
     topMainObj.weatherIconForecast();
-    let currentTemperature =await topMainObj.forecastTemperature();
+    // let currentTemperature =await topMainObj.forecastTemperature();
     //Display temperature,humidity, precipiation values.
     let temperatureData = await topMainObj.temperatureCelcius(displayName);
+    let forecastArray = await topMainObj.forecastTemperature();
+    for (let i = 0; i < forecastArray.length; i++) {
+      document.getElementsByClassName("precipitation-item")[i].innerHTML =
+        forecastArray[i];
+    }
     console.log(temperatureData)
-    document.getElementsByClassName("top-temp--value")[0].innerHTML =
-      `${currentTemperature[0]} C`;
+    document.getElementsByClassName("top-temp--value")[0].innerHTML = `${forecastArray[0]}C `
+      // document.getElementsByClassName("precipitation-item")[0].innerHTML = temperatureData[0];
     document.getElementsByClassName("top-temp--value")[1].innerHTML =
       temperatureData[1];
     document.getElementsByClassName("top-humidity--value")[0].innerHTML =
