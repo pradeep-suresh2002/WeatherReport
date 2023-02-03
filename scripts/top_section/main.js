@@ -79,17 +79,20 @@ var topSection = async function () {
     topMainObj.weatherIconForecast();
     // let currentTemperature =await topMainObj.forecastTemperature();
     //Display temperature,humidity, precipiation values.
-    let temperatureData = await topMainObj.temperatureCelcius(displayName);
-    let forecastArray = await topMainObj.forecastTemperature();
-    for (let i = 0; i < forecastArray.length; i++) {
+   
+    // let temperatureData =  await topMainObj.temperatureCelcius(displayName);
+    // Promise.all(temperatureData);
+    let temperatureData = await Promise.all([topMainObj.temperatureCelcius(displayName),topMainObj.forecastTemperature()]);
+    console.log(temperatureData[0]);
+    for (let i = 0; i < temperatureData[1].length; i++) {
       document.getElementsByClassName("precipitation-item")[i].innerHTML =
-        forecastArray[i];
+        temperatureData[1][i];
     }
-    console.log(temperatureData)
-    document.getElementsByClassName("top-temp--value")[0].innerHTML = `${forecastArray[0]}C `
+    // console.log(temperatureData)
+    document.getElementsByClassName("top-temp--value")[0].innerHTML = `${temperatureData[1][0]}C `
       // document.getElementsByClassName("precipitation-item")[0].innerHTML = temperatureData[0];
     document.getElementsByClassName("top-temp--value")[1].innerHTML =
-      temperatureData[1];
+      temperatureData[0][1];
     document.getElementsByClassName("top-humidity--value")[0].innerHTML =
       topMainObj.temperatureHumidity();
     document.getElementsByClassName("top-humidity--value")[1].innerHTML =
