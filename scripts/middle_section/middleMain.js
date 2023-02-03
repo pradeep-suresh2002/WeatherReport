@@ -77,7 +77,7 @@ class MiddleMain extends FilterCity {
    * Else if userValue is less than 3 => @return {number} 3
    * Else if the value is greater than 10 => @return {number} 10
    */
-  userInput() {
+   userInput() {
     if (displayNumber.value > 3 && displayNumber.value <= 10) {
       return displayNumber.value;
     } else if (displayNumber.value <= 3) {
@@ -131,18 +131,47 @@ class MiddleMain extends FilterCity {
     document.getElementById("flex-box").replaceChildren();
     let noOfCities;
     let len = weatherType.length;
+    console.log(weatherType);
     let userInputNumber = displayNumber.value;
+    console.log(userInputNumber);
 
     // Using Try and Catch to handle less no of cities selected by user
     try {
-      if (len <= 3) {
-        noOfCities = len;
-      }
-      else if (userInputNumber <= len) {
-        noOfCities = userInputNumber;
-      } 
-      else {
+      if (len <= 3 ) {
+          displayNumber.value = 3;
           noOfCities = len;
+      }
+      if (userInputNumber <=3 && len >3){
+        displayNumber.value = 3;
+        noOfCities = 3;       
+      }
+      if (userInputNumber >10 && len >3){
+        if (len <=10){
+          displayNumber.value = len;
+          noOfCities = len;
+        }
+        else{
+          displayNumber.value = 10;
+          noOfCities = 10;        
+        }
+      }
+      else if (userInputNumber > len ){
+        if (len <10){
+          displayNumber.value = len;
+          noOfCities = len;
+        }
+        else{
+          displayNumber.value = 10;
+          noOfCities = 10;
+        }
+      }
+      else if (len >3 && len <=15 && userInputNumber >=3 ){
+        displayNumber.value = userInputNumber;
+        noOfCities = userInputNumber;
+      }
+      else if (len >3 && len <=15 && userInputNumber > len){
+        displayNumber.value = userInputNumber;
+        noOfCities = len;
       }
     } catch (error) {
       noOfCities = error;
